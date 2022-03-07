@@ -20,7 +20,7 @@ def grouped_teams():
     for division, teams in grouped_teams.items():
         print(division)
         for team in teams:
-            print(f"\t{team.name_with_abbreviation})")
+            print(f"\t{team.name_with_abbreviation}")
 
 
 @arg("-n", "--name", help="player name")
