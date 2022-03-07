@@ -2,10 +2,8 @@ from dataclasses import dataclass
 from typing import Optional
 from functools import cache
 
-from nba.util import get_paginated_data
-
 from nba import API_URI
-from nba.util import height_to_meters, weight_to_kilograms
+from nba.util import get_paginated_data, height_to_meters, weight_to_kilograms
 from nba.teams import Team
 
 
