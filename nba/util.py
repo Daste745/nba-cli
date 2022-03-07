@@ -1,6 +1,7 @@
-from ctypes import Union
 import logging
+from typing import NoReturn
 import requests
+import sys
 
 
 log = logging.getLogger(__name__)
@@ -45,3 +46,8 @@ def height_to_meters(feet: int, inches: int) -> float:
 
 def weight_to_kilograms(pounds: int) -> float:
     return pounds * 0.4535924
+
+
+def error_and_exit(message: str) -> NoReturn:
+    print(message)
+    sys.exit(1)

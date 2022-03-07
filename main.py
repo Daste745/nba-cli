@@ -7,6 +7,7 @@ import sqlite3
 
 from argh import ArghParser, arg
 
+from nba.util import error_and_exit
 from nba.players import get_heaviest_player, get_tallest_player
 from nba.games import TeamStats, get_season_stats
 from nba.teams import get_grouped_teams
@@ -100,6 +101,9 @@ class StatWriter:
 )
 def teams_stats(*, season: int, output: str = "stdout"):
     """get statistics for a season"""
+
+    if not isinstance(season, int):
+        error_and_exit("Please provide a valid season number")
 
     print(f"Fetching stats for season {season}")
 
